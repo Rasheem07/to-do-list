@@ -1,0 +1,6 @@
+{
+  "homepage": "https://Rasheem07.github.io/to-do-list",
+  "dependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
