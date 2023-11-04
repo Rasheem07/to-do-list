@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>to do app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>explore</li>
+            <li>track</li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <p id="heading">to-do list 2023</p>
+        <div class="input-sec">
+          <input type="text" id="input" placeholder="Add your plans here!" />
+          <input type="date" id="date-input">
+          <p id="clear">x</p>
+          <button id="submit">add task</button>
+        </div>
+        <h1>tasks: </h1>
+        <!-- tasks to be added -->
+        <div class="task">
+          <!-- <div class="task-content">
+             <input type="text" class="text-task" readonly>
+                
+                <button class="edit">edit</button>
+                <button class="delete">delete</button>
+                <input type="checkbox" class="checkbox" />
+            
+         </div> -->
+        </div>
+        <div class="added">
+          <p id="added-message">Your task has been added to To-DO list.</p>
+          <button class="ok">OK</button>
+        </div>
+        <div class="delete-popup">
+          <p id="delete-message">Do you want to Delete this task?</p>
+          <p class="description">&#9888;Task will be deleted permenantly.</p>
+          <button class="back">back</button>
+          <button class="confirms">delete</button>
+        </div>
+      </main>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/store.js/2.0.1/store.legacy.min.js"></script>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

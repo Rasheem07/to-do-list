@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&family=Playfair+Display&family=Raleway&family=Roboto&family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #232323;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+nav ul {
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: white;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+nav ul li {
+  font-size: 1.125rem;
+  padding: 2.7vh 2.5vw 2.7vh 2.5vw;
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#heading {
+  color: white;
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 4vh 0;
+  font-family: "ubuntu", sans-serif;
+}
+
+.input-sec {
+  height: 8vh;
+  width: auto;
+  background-color: #cccccc;
+  padding: 1vh 3vw;
+  font-size: 1.125rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#input {
+  height: auto;
+  width: 40vw;
+  background-color: #cccccc;
+  padding: 1vh 1vw;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  border: none;
+  color: #232323;
+  cursor: pointer;
+}
+
+#input::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+#date-input{
+  width: 33px;
+  font-size: 1.2em;
+  background: #003554;
+  color: white;
+  padding: 3px;
+  margin-right: 3vw;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#date-input:focus{
+  border: none;
+  offset: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+  filter: invert(1);
+}
+
+#clear {
+  color: #231f1f;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 2vw;
+  margin-top: -0.4375vh;
+}
+
+#clear:hover {
+  color: #525252;
+  font-weight: 1000;
+}
+
+#submit {
+  font-weight: 500;
+  background-color: #137547;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  height: 6vh;
+  width: 6vw;
+  padding: 0 1em;
+  text-align: center;
+  border-radius: 0.6vw;
+  cursor: pointer;
+  white-space: nowrap;
+  width: auto;
+  box-shadow: (white, 0.1rem, 0.1rem, 0.2rem, 0.2rem);
+}
+
+button {
+  offset: none;
+  border: none;
+}
+
+.task-content {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: auto;
+  background-color: #cccccc;
+  color: #232323;
+  margin: 0.7rem 0;
+  padding: 0 1vw;
+  border-radius: 1vh;
+  transition: transform 1s ease-in-out;
+}
+
+@keyframes delete {
+  50% {
+    transform: translate(-0.1vw, -3vh);
+    opacity: -1;
+  }
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 5px;
+  padding: 1.875rem 0;
+  color: white;
+}
+
+.text-task {
+  offset: none;
+  border: none;
+  padding: 5px;
+  width: 30vw;
+  margin: 0 3vw;
+  font-family: "Open Sans", sans-serif;
+  white-space: nowrap;
+  overflow-x: auto;
+  background-color: #cccccc;
+  color: #232323;
+  cursor: pointer;
+}
+
+.text-task:focus {
+  offset: none;
+}
+.text-task::-webkit-scrollbar {
+  display: none;
+}
+
+/* Remove outline and border for focused input element */
+input:focus {
+  outline: none; /* Remove the default focus outline */
+  border: none; /* Remove the default border */
+}
+
+.due-date{
+  font-family: 'ubuntu', sans-serif;
+  font-size: 0.7em;
+  padding-right: 4vw;
+}
+
+.edit {
+  padding: 1.2vh 1.7vw;
+  margin-right: 0.9375rem;
+  width: auto;
+  border-radius: 5px;
+  background-color: #003554;
+  color: #cccccc;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.delete {
+  padding: 1.2vh 1.4vw;
+  margin-right: 0.9375rem;
+  width: auto;
+  border-radius: 5px;
+  background-color: #6e1423;
+  color: #cccccc;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.checkbox {
+  height: 1.6875rem;
+  width: 1.6875rem;
+  margin-right: 5px;
+}
+
+.added {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.01);
+  height: 25vh;
+  width: 25vw;
+  background-color: #eaf4f4;
+  color: #232323;
+  border-radius: 5px;
+  padding: 4vh 1vw 0 1vw;
+  font-size: 1.4rem;
+  white-space: wrap;
+  visibility: hidden;
+  transition: transform 0.4s ease-in-out;
+}
+
+.ok {
+  font-size: 1.2rem;
+  color: #cccccc;
+  background-color: #137547;
+  padding: 0.5em 1.2em;
+  border-radius: 0.45rem;
+  margin: 4vh 1vw 0 17vw;
+}
+
+.new-ok-popup {
+  top: 50%;
+  transform: translate(-50%, -38%) scale(1);
+  visibility: visible;
+}
+
+.delete-popup {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.01);
+  height: 25vh;
+  width: 25vw;
+  background-color: #eaf4f4;
+  color: #232323;
+  border-radius: 5px;
+  padding: 2vh 1vw 0 1vw;
+  font-size: 1.2rem;
+  white-space: wrap;
+  visibility: hidden;
+  transition: transform 0.4s ease-in-out;
+}
+
+.new-popup {
+  top: 50%;
+  transform: translate(-50%, -38%) scale(1);
+  visibility: visible;
+}
+
+#delete-message {
+  padding-left: 0.4em;
+  font-family: "ubuntu", sans-serif;
+}
+
+.description {
+  font-size: 1rem;
+  padding: 2vh 0 0 2.45vw;
+  color: #333333;
+}
+
+.back {
+  color: #cccccc;
+  background-color: #232323;
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  padding: 0.4em 0.8em;
+  border-radius: 0.45rem;
+  margin: 5vh 1vw 0 8vw;
+}
+
+.confirms {
+  font-size: 1.2rem;
+  color: #cccccc;
+  background-color: #137547;
+  padding: 0.4em 0.8em;
+  border-radius: 0.45rem;
+  margin: 5vh 0 0;
+}
+
+@media only screen and (max-width: 480px) {
+  #heading {
+    font-size: 150%;
+  }
+  .due-date{
+    font-size: 38%;
+    padding-right: 2vw;
+  }
+  #input {
+    font-size: 80%;
+  }
+  #input::placeholder {
+    font-size: 1.1rem;
+  }
+  .task-content{
+    border-radius: none;
+  }
+  #submit {
+    height: auto;
+    width: auto;
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+
+  .text-task {
+    font-size: 1rem;
+    border-radius: none;
+  }
+
+  .delete-popup {
+    width: 90vw;
+    height: auto;
+    padding: 3vh 1vw;
+    font-size: 1.4rem;
+  }
+
+  .delete-popup .description {
+    padding: 2vh 0 0 1.5vw;
+  }
+
+  .delete-popup{
+    padding-left: 3vw;
+  }
+
+  .back,
+  .confirms {
+    font-size: 1rem;
+    padding: 0.6em 1.2em;
+    margin: 3vh 0 0;
+  }
+
+  .back {
+    margin: 3vh 3vw 0 37vw;
+  }
+
+  .confirms {
+    margin: 4vh 0 0;
+  }
+
+  .ok{
+    padding: 0.5em 1.6em;
+    margin-left: 50vw;
+  }
+
+  .added{
+    width: 80vw;
+    height: auto;
+    padding: 3vh 3vw;
+    font-size: 1.2rem;
+  }
+}
+
